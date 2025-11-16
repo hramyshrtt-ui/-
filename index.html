@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الأول</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin-top: 50px; 
+            background-color: #f0f0f0;
+        }
+        h1 { color: darkblue; }
+        p { color: gray; }
+        button {
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover { background-color: navy; }
+        section {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>مرحبًا بك في موقعي!</h1>
+    <p>هذه صفحة واحدة كاملة على الهاتف.</p>
+
+    <button onclick="showSection()">اضغط هنا لمعرفة المزيد</button>
+
+    <section id="moreInfo" style="display:none;">
+        <h2>معلومات إضافية</h2>
+        <p>هنا يمكنك كتابة أي شيء تريده عن الموقع أو عن نفسك.</p>
+    </section>
+
+    <script>
+        function showSection() {
+            var section = document.getElementById('moreInfo');
+            if(section.style.display === 'none') {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
